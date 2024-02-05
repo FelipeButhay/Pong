@@ -31,10 +31,10 @@ class ball_c:
             d = -((pong.rect.y + pong.rect.h/2)-self.rect.centery)/(pong.rect.h/2)
             self.v = 10
             if self.a < 90 or self.a > 270:
-                self.a = 180 - d*65
+                self.a = 180 - d*50
                 self.rect.right = pong.rect.left
             else:
-                self.a = (d*65)%360
+                self.a = (d*50)%360
                 self.rect.left  = pong.rect.right
                 
         self.vx = self.v*math.cos(self.a/57.29578)
